@@ -41,8 +41,8 @@ class TestRoom < MiniTest::Test
   end
 
   def test_room_limit_adhered_to()
-    actual = @room2.add_guest(@guset)
-    expected = "Error"
+    actual = @room2.add_guest(@guest)
+    expected = "Error - guest would exceed max occupancy of room"
     assert_equal(expected, actual)
   end
 

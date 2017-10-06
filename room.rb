@@ -25,7 +25,7 @@ class Room
     if (@guests.length + 1) <= @max_guests
       @guests.push(guest)
     else
-      return "Error"
+      return "Error - guest would exceed max occupancy of room"
     end
   end
 
