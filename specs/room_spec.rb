@@ -7,9 +7,14 @@ require_relative("../song.rb")
 class TestRoom < MiniTest::Test
 
   def setup()
-    @room = Room.new(1)
+    @room = Room.new(10)
     @song = Song.new("Brass in Pocket", "The Pretenders")
     @guest = Guest.new("Andy")
+  end
+
+  def test_room_has_number()
+    actual = @room.number()
+    assert_equal(10, actual)
   end
 
   def test_room_starts_with_no_guests()

@@ -1,16 +1,16 @@
 class Song
 
-  def initialize(song_name, song_title)
-    @song_name = song_name
-    @song_title = song_title
+  def initialize(name, title)
+    @name = name
+    @title = title
   end
 
   def return_song_name()
-    return @song_name
+    return @name
   end
 
   def return_song_artist()
-    return @song_title
+    return @title
   end
 
 end

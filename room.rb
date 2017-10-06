@@ -1,9 +1,15 @@
 class Room
 
-  def initialize(room_number)
-    @room_number = room_number
+  attr_reader(:number)
+
+  def initialize(number)
+    @number = number
     @guests = []
     @songs = []
+  end
+
+  def return_number(number)
+    return @number
   end
 
   def number_of_guests()
