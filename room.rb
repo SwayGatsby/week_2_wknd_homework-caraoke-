@@ -1,9 +1,10 @@
 class Room
 
-  attr_reader(:number)
+  attr_reader(:number, :max_guests)
 
-  def initialize(number)
+  def initialize(number, max_guests)
     @number = number
+    @max_guests = max_guests
     @guests = []
     @songs = []
   end
@@ -21,7 +22,11 @@ class Room
   end
 
   def add_guest(guest)
-    @guests.push(guest)
+    if (@guests.length + 1) <= @max_guests
+      @guests.push(guest)
+    else
+      return "Error"
+    end
   end
 
   def add_song(song)

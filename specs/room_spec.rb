@@ -7,7 +7,8 @@ require_relative("../song.rb")
 class TestRoom < MiniTest::Test
 
   def setup()
-    @room = Room.new(10)
+    @room = Room.new(10, 5)
+    @room2 = Room.new(2, 0)
     @song = Song.new("Brass in Pocket", "The Pretenders")
     @guest = Guest.new("Andy")
   end
@@ -39,5 +40,10 @@ class TestRoom < MiniTest::Test
     assert_equal(1, actual)
   end
 
+  def test_room_limit_adhered_to()
+    actual = @room2.add_guest(@guset)
+    expected = "Error"
+    assert_equal(expected, actual)
+  end
 
 end
