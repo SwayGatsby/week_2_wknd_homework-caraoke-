@@ -1,16 +1,13 @@
 class Room
 
-  attr_reader(:number, :max_guests)
+attr_reader(:number, :max_guests, :guests, :songs, :fee)
 
-  def initialize(number, max_guests)
+  def initialize(number, max_guests, fee_pp)
     @number = number
     @max_guests = max_guests
     @guests = []
     @songs = []
-  end
-
-  def return_number(number)
-    return @number
+    @fee = fee_pp
   end
 
   def number_of_guests()
@@ -32,5 +29,10 @@ class Room
   def add_song(song)
     @songs.push(song)
   end
+
+  def max_number_of_guests()
+    return @max_guests
+  end
+
 
 end

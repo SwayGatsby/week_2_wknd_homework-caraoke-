@@ -10,13 +10,11 @@ class TestSong < MiniTest::Test
   end
 
   def test_can_get_song_name()
-    actual = @song.return_song_name
-    assert_equal("Bust a Move", actual)
+    assert_equal("Bust a Move", @song.name)
   end
 
   def test_can_get_song_artist()
-    actual = @song.return_song_artist
-    assert_equal("Young MC", actual)
+    assert_equal("Young MC", @song.title)
   end
 
 end
