@@ -30,9 +30,4 @@ attr_reader(:number, :max_guests, :guests, :songs, :fee)
     @songs.push(song)
   end
 
-  def max_number_of_guests()
-    return @max_guests
-  end
-
-
 end

@@ -5,7 +5,7 @@ require_relative("../song.rb")
 
 class TestSong < MiniTest::Test
 
-  def setup
+  def setup()
     @song = Song.new("Bust a Move", "Young MC")
   end
 
@@ -16,5 +16,6 @@ class TestSong < MiniTest::Test
   def test_can_get_song_artist()
     assert_equal("Young MC", @song.title)
   end
+
 
 end
